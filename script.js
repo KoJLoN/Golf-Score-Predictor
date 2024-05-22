@@ -56,11 +56,6 @@ function selectOption(button) {
     const options = document.querySelectorAll(`[data-question-index="${index}"]`);
     options.forEach(option => option.classList.remove('selected'));
     button.classList.add('selected');
-    
-    const nextQuestion = document.querySelector(`.question:nth-child(${index + 2})`);
-    if (nextQuestion) {
-        nextQuestion.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
 }
 
 function submitQuiz() {
